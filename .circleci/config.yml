@@ -51,7 +51,7 @@ jobs:
       - persist_to_workspace:
           root: wordpress
           paths:
-            - '.'
+            - 'wp-content/themes/zest/dist'
 
   deploy:
     docker: 
