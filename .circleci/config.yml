@@ -75,8 +75,9 @@ workflows:
   build_and_deploy:
     jobs:
       - build-wordpress
-      - build-theme
-      - deploy:
+      - build-theme:
           requires:
             - build-wordpress
+      - deploy:
+          requires:
             - build-theme
