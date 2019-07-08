@@ -45,7 +45,7 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - build-wordpress:
+      - build-wordpress
       - deploy:
           requires:
             - build-wordpress
