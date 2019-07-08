@@ -1,0 +1,47 @@
+{
+    "name": "bright/wac",
+    "type": "project",
+    "authors": [{
+        "name": "Sam Davis",
+        "email": "sam@sjd.co"
+    }],
+    "repositories": [{
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "sjd/advanced-custom-fields-pro",
+                "version": "5.8.1",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9ODExNTV8dHlwZT1wZXJzb25hbHxkYXRlPTIwMTYtMDUtMDkgMDI6NDA6MjU=&v=5.8.1"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "sjd/wp-sync-db",
+                "version": "1.5",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/wp-sync-db/wp-sync-db/archive/master.zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "sjd/wp-sync-db": "^1.5",
+        "sjd/advanced-custom-fields-pro": "^5.8",
+        "wpackagist-plugin/timber-library": "^1.9",
+        "wpackagist-plugin/classic-editor": "^1.5",
+        "wpackagist-plugin/wp-nested-pages": "^3.0",
+        "wpackagist-plugin/codepress-admin-columns": "^3.4",
+        "wpackagist-plugin/svg-support": "^2.3",
+        "wpackagist-plugin/wordpress-seo": "^11.5"
+    }
+}

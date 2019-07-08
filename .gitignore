@@ -1,0 +1,10 @@
+/wordpress/*
+!/wordpress/wp-content
+!/wordpress/composer.json
+!/wordpress/composer.lock
+
+/wordpress/wp-content/*
+!/wordpress/wp-content/themes
+
+/wordpress/wp-content/themes/*
+!/wordpress/wp-content/themes/custom-theme
