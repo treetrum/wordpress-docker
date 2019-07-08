@@ -38,6 +38,7 @@ jobs:
           command: |
             sudo apt install rsync
             echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+            sudo rm wordpress/wp-config.php
             rsync -avO --no-perms ./wordpress/ sam@sjd.co:/var/www/testing.sjd.co/
 
 workflows:
