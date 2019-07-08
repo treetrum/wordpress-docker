@@ -8,7 +8,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - composer-cache-{{ checksum "composer.lock" }}
+            - composer-cache-{{ checksum "wordpress/composer.lock" }}
             - composer-cache
       - run:
           name: Build WordPress
