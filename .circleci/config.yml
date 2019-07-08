@@ -1,0 +1,51 @@
+version: 2.0
+jobs:
+
+  build-wordpress:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - composer-cache-{{ checksum "composer.lock" }}
+            - composer-cache
+      - run:
+          name: Build WordPress
+          command: |
+            make start
+      - save_cache:
+          key: composer-cache-{{ checksum "wordpress/composer.lock" }}
+          paths:
+            - wordpress/vendor
+            - wordpress/wp-content/plugins
+      - persist_to_workspace:
+          root: wordpress
+          paths:
+            - '.'
+
+  deploy:
+    docker: 
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "15:17:f1:78:e7:ea:01:99:d5:a3:32:d9:c2:aa:81:b7"
+      - attach_workspace:
+          at: wordpress
+      - run:
+          name: Deploy to staging
+          command: |
+            sudo apt install rsync
+            echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+            rsync -avO --no-perms . sam@sjd.co:/var/www/testing.sjd.co/
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build-wordpress:
+      - deploy:
+          requires:
+            - build-wordpress
