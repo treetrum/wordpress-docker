@@ -1,0 +1,26 @@
+<div class="say-hello-footer">
+    <div class="container">
+
+        <h2 class="say-hello-footer__title heading-2">
+            {{ title ?: "Say hello" }}
+        </h2>
+
+        <p class="say-hello-footer__copy">
+            <strong>E:</strong>
+            <a href="mailto:{{contact_details.email}}">{{contact_details.email}}</a><br>
+            <strong>P:</strong>
+            {{contact_details.phone}}
+        </p>
+
+        <p class="say-hello-footer__copy">
+            {{function('nl2br', contact_details.address)}}
+            <br>
+            <a href="{{contact_details.address_map_link}}" rel="noreferrer noopener" target="_blank">View map</a>
+        </p>
+
+        <p class="say-hello-footer__socials">
+            {% include "components/atoms/social-links.twig" %}
+        </p>
+
+    </div>
+</div>

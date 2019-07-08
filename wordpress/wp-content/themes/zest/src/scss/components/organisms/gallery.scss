@@ -1,0 +1,25 @@
+.gallery {
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin: -$project_grid_gutter/2;
+		margin-top: $project_grid_gutter/2;
+		margin-bottom: $project_grid_gutter/2;
+	}
+
+	&__item {
+		width: 100%;
+		padding: $project_grid_gutter/2;
+		position: relative;
+	}
+
+	@include breakpoint(md) {
+		&__inner {
+			&>* {
+				width: 50%;
+			}
+		}
+	}
+}

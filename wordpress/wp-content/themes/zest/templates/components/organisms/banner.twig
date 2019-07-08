@@ -1,0 +1,16 @@
+{% set bannerImage = image ?: '' %}
+{% set style = image ? 'style="background-image: url(' ~ image ~ ')"' : '' %}
+
+<div class="banner split-bg--wg">
+    <div class="container full-width">
+        <div class="banner__bg-container" {{style}}>
+            <div class="container">
+                <div class="banner__inner">
+                    <h2 class="heading-2">
+                        {{ title }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

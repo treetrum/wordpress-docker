@@ -1,0 +1,9 @@
+<a class="cta-primary" href="{{href ?: '#'}}" target="{{new_tab ? '_blank' : '_self'}}">
+    {% if back_icon %}
+        <i class="icon icon-arrow-left cta-primary__icon cta-primary__icon--back"></i>
+    {% endif %}
+    <span class="cta-primary__text">{{text ?: "Text here"}}</span>
+    {% if not back_icon %}
+        <i class="icon icon-arrow-right cta-primary__icon"></i>
+    {% endif %}
+</a>

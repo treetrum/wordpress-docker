@@ -1,0 +1,46 @@
+{% set our_services = post.meta('our_services') %}
+
+<div class="our-services split-bg--gw">
+    <div class="container full-width">
+        <div class="our-services__bg-container">
+            <div class="container container-sm">
+
+                <div class="row">
+                    <div class="columns xs-12">
+                        <div class="our-services__intro">
+                            <h2 class="heading-2">
+                                {{our_services.title}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="columns xs-12 md-6">
+                        <div class="rte">
+                            {{our_services.left_column}}
+                        </div>
+                    </div>
+                    <div class="columns xs-12 md-6">
+                        <div class="rte">
+                            {{our_services.right_column}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="columns xs-12">
+                        <div class="our-services__outro">
+                            {% include "components/atoms/cta-primary.twig" with { 
+								text: our_services.cta.text, 
+								href: our_services.cta.link, 
+								new_tab: our_services.cta.new_tab
+							} %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="primary-footer">
+    <div class="container">
+        <div class="primary-footer__items">
+
+            <div class="primary-footer__logo">
+                <a href="{{site.link}}">
+                    <img src="{{site.theme.uri}}/dist/images/zest-logo-white.png" alt="Zest Logo">
+                </a>
+            </div>
+
+            <div class="primary-footer__links">
+                {% include "components/molecules/nav-links.twig" %}
+            </div>
+
+            <div class="primary-footer__spacer"></div>
+
+            <div class="primary-footer__copyright">
+                <p>
+                    {{footer.copyright|replace({'{{year}}': function('date', 'Y')})}}
+                </p>
+            </div>
+
+            <div class="primary-footer__links">
+                <li>
+                    <a href="{{function('get_permalink', 3)}}">Privacy Policy</a>
+                </li>
+            </div>
+
+            <div class="primary-footer__logo primary-footer__logo--secondary">
+                <a href="{{site.link}}">
+                    <img src="{{site.theme.uri}}/dist/images/ebos-logo.png" alt="EBOS Healthcare Logo">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.staff {
+	@extend %section-padding--lg;
+
+	&__intro {
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.image-slider {
+		.staff-member {
+			max-width: 75vw;
+		}
+	}
+
+	@include breakpoint(md) {
+		&__intro {
+			width: 60%;
+			margin-bottom: 100px;
+		}
+
+		.image-slider {
+			.staff-member {
+				max-width: 400px;
+			}
+		}
+	}
+}

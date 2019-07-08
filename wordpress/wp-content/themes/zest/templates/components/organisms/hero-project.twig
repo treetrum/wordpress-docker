@@ -1,0 +1,11 @@
+<div class="hero-project">
+    <div class="container full-width">
+        <div class="hero-project__bg-container" style="background-image: url({{post.thumbnail.src}})">
+            <div class="container">
+                <div class="hero-project__back">
+                    {% include "components/atoms/cta-primary.twig" with { text: "All work", href: function('get_post_type_archive_link', 'project'), back_icon: true } %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include "components/organisms/hero-page.twig" %}
+
+    {% set banner = post.meta('banner') %}
+    {% include "components/organisms/banner.twig" with { 
+		title: "Think. Learn.</br>Create. Support. "
+	} %}
+
+    {% include "components/organisms/what-we-believe.twig" %}
+
+    {% include "components/organisms/our-services.twig" %}
+
+    {% include "components/atoms/page-separator.twig" %}
+
+    {% include "components/organisms/say-hello-footer.twig" %}
+
+{% endblock content %}

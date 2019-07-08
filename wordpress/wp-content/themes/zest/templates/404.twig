@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include "components/organisms/hero-page.twig" with { 
+		class: "hero-page--404",
+		title: "Not Found", 
+		subtitle: "The requested page could not be found.<br> Please ensure you do not have any typos in the URL.<br> Alternatively, <a href="~ site.url ~">click here</a> to head to the homepage."
+	} %}
+    {% include "components/atoms/page-separator.twig" %}
+    {% include "components/organisms/say-hello-footer.twig" %}
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+<div class="pillars">
+    <div class="container full-width">
+        <div class="pillars__inner">
+
+            <div class="pillars__intro">
+                <p class="lead">
+                    {{pillars_intro}}
+                </p>
+            </div>
+
+            <div class="pillars__pillars">
+                <div class="pillars__col pillars__col--content">
+                    {% include "components/molecules/pillar.twig" with { pillar: pillars[0] } %}
+                    {% include "components/molecules/pillar.twig" with { pillar: pillars[2] } %}
+                </div>
+                <div class="pillars__col pillars__col--logo">
+                    <img src="{{site.theme.uri}}/dist/images/z-logo.png" alt="">
+                </div>
+                <div class="pillars__col pillars__col--content">
+                    {% include "components/molecules/pillar.twig" with { pillar: pillars[1] } %}
+                    {% include "components/molecules/pillar.twig" with { pillar: pillars[3] } %}
+                </div>
+            </div>
+
+            <div class="pillars__outro">
+                <p>
+                    {% include "components/atoms/cta-primary.twig" with { text: pillars_link[0].text, href: pillars_link[0].link, new_tab: pillars_link[0].new_tab } %}
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

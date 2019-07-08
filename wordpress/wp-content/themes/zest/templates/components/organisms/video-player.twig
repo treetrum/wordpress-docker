@@ -1,0 +1,15 @@
+{% set video = post.meta('video') %}
+
+<div class="video-player" data-video-url="{{video.vimeo_url}}">
+	<div class="container">
+		<div class="video-player__poster">
+			<div class="video-player__cta">
+				<i class="icon icon-play video-player__cta__icon"></i>
+				<span class="lead video-player__cta__text">
+					{{function('nl2br', video.cta)}}
+				</span>
+			</div>
+			<div class="video-player__player"></div>
+		</div>
+	</div>
+</div>

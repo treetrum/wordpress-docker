@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="7px" viewBox="0 0 13 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>chevron-up</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-746.000000, -308.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M756.538893,314.645265 C756.929418,315.035789 757.562582,315.035789 757.953107,314.645265 C758.343631,314.25474 758.343631,313.621575 757.953107,313.231051 L753.145107,308.423051 C752.579855,307.859121 751.666145,307.859121 751.101722,308.422223 L746.292893,313.231051 C745.902369,313.621575 745.902369,314.25474 746.292893,314.645265 C746.683418,315.035789 747.316582,315.035789 747.707107,314.645265 L752.123,310.229371 L756.538893,314.645265 Z" id="chevron-up"></path>
+        </g>
+    </g>
+</svg>

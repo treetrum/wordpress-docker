@@ -1,0 +1,42 @@
+.say-hello-footer {
+	padding: 100px 0;
+	text-align: center;
+
+	strong {
+		color: $color_pink_purple;
+		font-weight: bold;
+	}
+
+	a {
+		color: $color_pink_purple;
+		text-decoration: underline;
+		font-weight: 400;
+
+		&:hover {
+			color: $color_pink;
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	&__copy {
+		margin-bottom: 50px;
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: center;
+
+		a {
+			text-decoration: none;
+			padding: 0 15px;
+			font-size: 23 / 16 + em;
+		}
+	}
+
+	@include breakpoint(md) {
+		padding: 250px 0;
+	}
+}

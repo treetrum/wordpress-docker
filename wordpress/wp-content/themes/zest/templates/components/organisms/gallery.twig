@@ -1,0 +1,17 @@
+{% set gallery = gallery ?: post.gallery %}
+
+{% if gallery|length > 0 %}
+    <div class="gallery">
+        <div class="container full-width">
+            <div class="gallery__inner">
+                {% for item in gallery %}
+                    <div class="gallery__item">
+                        <div class="gallery-item">
+                            <div class="gallery-item__thumb" style="background-image: url({{Image(item)}})"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}

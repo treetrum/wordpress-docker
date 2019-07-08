@@ -1,0 +1,9 @@
+@mixin sharedInputs {
+
+	input,
+	select,
+	textarea {
+		@content;
+	}
+
+}

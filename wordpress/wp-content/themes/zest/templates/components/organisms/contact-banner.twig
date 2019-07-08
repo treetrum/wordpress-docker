@@ -1,0 +1,40 @@
+<div class="contact-banner">
+    <div class="container full-width">
+        <div class="contact-banner__bg-container">
+            <div class="container">
+                <div class="contact-banner__sections">
+
+                    <div class="contact-banner__section">
+                        <p>
+                            <strong>E:</strong>
+                            <a href="mailto:{{contact_details.email}}">{{contact_details.email}}</a>
+                            <br>
+
+                            <strong>P:</strong>
+                            {{contact_details.phone}}
+                            <br>
+
+                            <strong>W:</strong>
+                            <a href="{{contact_details.website}}">
+                                {{contact_details.website|replace({'http://': '', 'https://': ''})}}
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="contact-banner__section">
+                        <p>
+                            {{function('nl2br', contact_details.address)}}
+                            <br>
+                            <a href="{{contact_details.address_map_link}}" rel="noreferrer noopener" target="_blank">View map</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-banner__section contact-banner__section--socials">
+                        {% include "components/atoms/social-links.twig" %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

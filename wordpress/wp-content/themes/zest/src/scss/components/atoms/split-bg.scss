@@ -1,0 +1,44 @@
+.split-bg {
+
+	&--wg {
+		position: relative;
+		background-color: hsl(0, 0, 95%);
+
+		&>* {
+			position: relative;
+			z-index: 1;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			max-height: 50vh;
+			background-color: white;
+		}
+	}
+
+	&--gw {
+		position: relative;
+		background-color: white;
+
+		&>* {
+			position: relative;
+			z-index: 1;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			max-height: 50vh;
+			background-color: hsl(0, 0, 95%);
+		}
+	}
+}

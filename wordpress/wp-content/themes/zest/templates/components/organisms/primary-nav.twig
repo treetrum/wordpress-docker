@@ -1,0 +1,40 @@
+<div class="primary-nav">
+    <div class="container">
+        <div class="primary-nav__items">
+
+            <div class="primary-nav__logo">
+                <a href="{{site.url}}">
+                    <img alt="Zest logo" src="{{site.theme.uri}}/dist/images/zest-logo.svg">
+                </a>
+            </div>
+
+            <nav class="primary-nav__links">
+                {% include "components/molecules/nav-links.twig" %}
+            </nav>
+
+            <div class="primary-nav__spacer"></div>
+
+            <div class="primary-nav__info">
+                <div class="primary-nav__phone">
+                    {{contact_details.phone}}
+                </div>
+                <div class="primary-nav__email">
+                    <a href="mailto:{{contact_details.email}}">
+                        {{contact_details.email}}
+                    </a>
+                </div>
+            </div>
+
+            <div class="primary-nav__hamburger">
+                <button class="primary-nav__hamburger__button">
+                    <div class="primary-nav__hamburger__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

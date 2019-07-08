@@ -1,0 +1,14 @@
+<div class="cta-block {{class ?: ''}}">
+    <div class="container">
+        <div class="row align-center">
+            <div class="columns xs-12 sm-10 md-7">
+                <p class="lead">
+                    {{ copy }}
+                </p>
+                <p>
+                    {% include "components/atoms/cta-primary.twig" with { text: cta.title, href: cta.href, new_tab: new_tab } %}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

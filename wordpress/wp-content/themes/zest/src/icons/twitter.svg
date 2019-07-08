@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>twitter</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-746.000000, -367.000000)" fill="#B81D8D" fill-rule="nonzero">
+            <path d="M768,370.128 L766,369.628 L767,367.628 L764.536,368.328 C763.228505,367.108209 761.320871,366.782749 759.682895,367.500015 C758.04492,368.217281 756.990341,369.839889 757,371.628 L757,372.628 C753.461,373.358 750.366,371.428 747.5,368.128 C747,370.794667 747.5,372.794667 749,374.128 L746,373.628 C746.4,375.697 747.362,377.328 750,377.628 L747.5,378.628 C748.5,380.628 750.066,380.938 752.5,381.128 C750.607114,382.481029 748.326089,383.182883 746,383.128 C758.755,388.797 766,380.464 766,373.128 L766,371.8 L768,370.128 Z" id="twitter"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+$project_grid_gutter: 15px;
+
+.project-grid {
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -$project_grid_gutter/2;
+
+		&>* {
+			width: 100%;
+			padding: $project_grid_gutter/2;
+		}
+	}
+
+	&--home {
+		position: relative;
+		background-color: hsl(0, 0, 95%);
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 300px;
+			background-color: white;
+			content: '';
+			// z-index: -1;
+		}
+	}
+
+	@include breakpoint(md) {
+		.project-grid {
+			&__inner {
+				&>* {
+					width: 50%;
+				}
+			}
+		}
+	}
+}

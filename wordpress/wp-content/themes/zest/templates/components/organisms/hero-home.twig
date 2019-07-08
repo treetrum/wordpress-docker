@@ -1,0 +1,24 @@
+{% set data = function('get_field', 'hero_items') %}
+
+<div class="hero-home" data-slides='{{function('json_encode', data)}}'>
+    <div class="container full-width">
+        <div class="hero-home__inner">
+            <div class="hero-home__image" style="background-image: url({{data[0].desktop_image}})"></div>
+            <div class="hero-home__image-mobile" style="background-image: url({{data[0].mobile_image}})"></div>
+            <div class="hero-home__title-animation-container">
+                <h1 class="hero-home__title heading-1">
+                    {{data[0].title}}
+                </h1>
+            </div>
+            <a class="hero-home__copy" href="#intro">
+                <div class="hero-home__copy__icon">
+                    <i class="icon icon-chevron-down"></i>
+                </div>
+                <p class="hero-home__copy__text">
+                    Together we can deliver<br>
+                    a healthier Australia.
+                </p>
+            </a>
+        </div>
+    </div>
+</div>

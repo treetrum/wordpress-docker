@@ -1,0 +1,79 @@
+.primary-nav {
+
+	&__items {
+		display: flex;
+		align-items: center;
+		height: $primary_nav_height;
+	}
+
+	&__spacer {
+		flex: 1;
+	}
+
+	&__logo {
+		width: 80px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		@include show-for(md);
+	}
+
+	&__phone {
+		font-size: 13 / 16 + em;
+		margin-right: 25px;
+		font-weight: 400;
+	}
+
+	&__email {
+
+		font-size: 13 / 16 + em;
+
+		a {
+			color: $color_pink;
+			text-decoration: underline;
+		}
+	}
+
+	&__hamburger {
+		@include hide-for(md);
+
+		&__button {
+			background-color: transparent;
+			border: 0;
+			cursor: pointer;
+		}
+
+		&__icon {
+			@include animatedHamburger($width: 30px, $height: 21px, $barHeight: 3px, $barColor: $color_pink, $duration: 400ms, $rotation: 90deg, $rounded: true);
+		}
+	}
+
+	&__links {
+		@include show-for(md);
+		display: flex;
+
+		li {
+			display: block;
+
+			a {
+				@extend %nav_link;
+
+				&:hover {
+					color: $color_pink;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(md) {
+		&__logo {
+			width: 100px;
+			margin-right: 50px;
+		}
+	}
+}

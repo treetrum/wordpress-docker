@@ -1,0 +1,46 @@
+.cta-primary {
+	position: relative;
+	font-size: 25px;
+	line-height: 1.5;
+	letter-spacing: -0.3px;
+	font-weight: 400;
+	padding: 0 5px;
+	transition: 300ms ease all;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-image: linear-gradient(to bottom right, $color_pink, $color_purple);
+		transition: 300ms ease all;
+	}
+
+	&:hover {
+		color: white;
+
+		&::before {
+			height: calc(100% + 5px);
+		}
+	}
+
+	&__text {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__icon {
+		position: relative;
+		z-index: 1;
+		font-size: 11/16 + em;
+		margin-left: 5px;
+		transform: translateY(-2px);
+
+		&--back {
+			margin-right: 5px;
+			margin-left: 0;
+		}
+	}
+}

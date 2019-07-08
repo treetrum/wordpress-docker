@@ -1,0 +1,31 @@
+.banner {
+	&__bg-container {
+		padding: 125px 0;
+		background-image: linear-gradient(to top right, $color_pink, $color_purple);
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__inner {
+		width: 95%;
+		margin: 0 auto;
+		text-align: center;
+		color: white;
+	}
+
+	@include breakpoint(md) {
+		&__bg-container {
+			padding: 175px 0;
+		}
+	}
+
+	@include breakpoint(lg) {
+		&__bg-container {
+			padding: 275px 0;
+		}
+
+		&__inner {
+			width: 75%;
+		}
+	}
+}

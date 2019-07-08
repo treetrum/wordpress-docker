@@ -1,0 +1,13 @@
+.cta-block {
+	@extend %section-padding;
+
+	text-align: center;
+
+	.lead {
+		margin-bottom: 40px;
+	}
+
+	&--grey {
+		background-color: hsl(0, 0, 95%);
+	}
+}

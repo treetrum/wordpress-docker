@@ -1,0 +1,14 @@
+.what-we-believe {
+	@extend %section-padding;
+	text-align: center;
+	background-color: hsl(0, 0, 95%);
+
+	&__intro {
+		margin-bottom: 80px;
+		color: $color_pink_purple;
+	}
+
+	.container {
+		max-width: 1000px;
+	}
+}

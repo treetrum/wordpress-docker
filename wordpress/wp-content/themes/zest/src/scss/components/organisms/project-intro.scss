@@ -1,0 +1,23 @@
+.project-intro {
+	padding: 80px 0 100px;
+
+	&__title {
+		margin-bottom: 25px;
+	}
+
+	&__client {
+		margin-bottom: 50px;
+	}
+
+	@include breakpoint(md) {
+		padding: 80px 0 160px;
+
+		&__title {
+			margin-bottom: 50px;
+		}
+
+		&__client {
+			margin-bottom: 0;
+		}
+	}
+}

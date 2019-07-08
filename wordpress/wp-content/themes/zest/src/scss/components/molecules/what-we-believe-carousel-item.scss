@@ -1,0 +1,32 @@
+.what-we-believe-carousel-item {
+	position: relative;
+	overflow: hidden;
+
+	&__icon {
+		height: 120px;
+		margin: 0 0 25px;
+	}
+
+	&__title {
+		margin: 0 0 25px;
+	}
+
+	&__copy {
+		margin: 0 0 40px;
+	}
+
+	@include breakpoint(md) {
+
+		&__icon {
+			margin: 0 0 50px;
+		}
+
+		&__title {
+			margin: 0 0 50px;
+		}
+
+		&__copy {
+			margin: 0 0 100px;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.carousel {
+	position: relative;
+
+	&__dots {
+		display: flex;
+		justify-content: center;
+		margin: 20px -4px 0;
+	}
+
+	&__dot {
+		border: 0;
+		appearance: none;
+		cursor: pointer;
+
+		flex-shrink: 0;
+		display: block;
+		width: 7px;
+		height: 7px;
+		border-radius: (7px) / 2;
+		margin: 0 4px;
+		background-color: rgba(green, .25);
+		transition: 1s ease all;
+
+		&--active {
+			background-color: green;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

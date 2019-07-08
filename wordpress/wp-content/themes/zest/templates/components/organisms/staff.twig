@@ -1,0 +1,37 @@
+{% set our_movers = post.meta('our_movers') %}
+
+<div class="staff">
+
+    <div class="container">
+        <div class="staff__intro">
+            <h2 class="heading-2">
+                {{our_movers.title}}
+            </h2>
+        </div>
+    </div>
+
+    <div class="image-slider">
+        <div class="image-slider__wrapper">
+            <div class="image-slider__scroll">
+                <div class="container">
+                    <div class="image-slider__inner">
+
+                        {% for person in our_movers.staff %}
+                            {% include "components/molecules/staff-member.twig" %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-slider__control">
+            <div class="container">
+                <div class="image-slider__control__inner">
+                    <div class="image-slider__control__thumb"></div>
+                    <div class="image-slider__control__track"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

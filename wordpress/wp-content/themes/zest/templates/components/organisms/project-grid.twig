@@ -1,0 +1,9 @@
+<div class="project-grid {{class ?: ''}}">
+    <div class="container full-width">
+        <div class="project-grid__inner">
+            {% for project in projects %}
+                {% include "components/molecules/project-tile.twig" %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

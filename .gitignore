@@ -2,9 +2,10 @@
 !/wordpress/wp-content
 !/wordpress/composer.json
 !/wordpress/composer.lock
+!/wordpress/.htaccess
 
 /wordpress/wp-content/*
 !/wordpress/wp-content/themes
 
 /wordpress/wp-content/themes/*
-!/wordpress/wp-content/themes/custom-theme
+!/wordpress/wp-content/themes/zest

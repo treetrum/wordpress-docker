@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include "components/organisms/hero-project.twig" %}
+
+    {% include "components/organisms/project-intro.twig" %}
+
+    {% include "components/organisms/testimonial.twig" %}
+
+    {% include "components/organisms/gallery.twig" %}
+
+    {% include "components/organisms/say-hello-footer.twig" with { title: "Start a project" } %}
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+.staff-member {
+	// max-width: 400px;
+
+	&__image {
+		margin-bottom: 35px;
+	}
+
+	&__name {
+		color: $color_pink_purple;
+		margin: 0 0 12px;
+	}
+
+	&__title {
+		margin: 0 0 8px;
+	}
+
+	&__blurb {
+		margin: 0;
+	}
+}

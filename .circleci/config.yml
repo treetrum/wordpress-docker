@@ -23,6 +23,36 @@ jobs:
           paths:
             - '.'
 
+  build-theme:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - attach_workspace:
+          at: wordpress
+      - restore_cache:
+          keys:
+            - node-cache-{{ checksum "wordpress/wp-content/themes/zest/package-lock.json" }}
+            - node-cache
+      - run:
+          name: Install theme dependencies
+          command: |
+            cd wordpress/wp-content/themes/zest
+            npm install
+      - save_cache:
+          key: node-cache-{{ checksum "wordpress/wp-content/themes/zest/package-lock.json" }}
+          paths:
+            - wordpress/wp-content/themes/zest/node_modules
+      - run:
+          name: Build
+          command: |
+            cd wordpress/wp-content/themes/zest
+            npm run build
+      - persist_to_workspace:
+          root: wordpress
+          paths:
+            - '.'
+
   deploy:
     docker: 
       - image: circleci/node:8
@@ -38,8 +68,7 @@ jobs:
           command: |
             sudo apt install rsync
             echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-            sudo rm wordpress/wp-config.php
-            rsync -avO --no-perms ./wordpress/ sam@sjd.co:/var/www/testing.sjd.co/
+            rsync -avO --no-perms --ignore node_modules --ignore wordpress/wp-config.php ./wordpress/ sam@sjd.co:/var/www/testing.sjd.co/
 
 workflows:
   version: 2

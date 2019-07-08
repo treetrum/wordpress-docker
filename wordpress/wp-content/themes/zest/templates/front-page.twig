@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include "components/organisms/hero-home.twig" %}
+
+    {% set cta_block_1 = function('get_field', 'cta_block_1')[0] %}
+    {% include "components/organisms/cta-block.twig" with {
+        copy: cta_block_1.copy,
+        cta: { title: cta_block_1.link[0].text, href: cta_block_1.link[0].link, new_tab: cta_block_1.link[0].new_tab } 
+    }%}
+
+    {% include "components/organisms/project-grid.twig" with { class: "project-grid--home" }   %}
+
+    {% set cta_block_2 = function('get_field', 'cta_block_2')[0] %}
+    {% include "components/organisms/cta-block.twig" with {
+        class: "cta-block--grey",
+        copy: cta_block_2.copy,
+        cta: { title: cta_block_2.link[0].text, href: cta_block_2.link[0].link, new_tab: cta_block_2.link[0].new_tab } 
+    }%}
+
+    {% include "components/organisms/pillars.twig" %}
+
+    {% include "components/atoms/page-separator.twig" %}
+
+    {% include "components/organisms/say-hello-footer.twig" %}
+
+{% endblock content %}

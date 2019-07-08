@@ -1,0 +1,25 @@
+.testimonial {
+	text-align: center;
+	color: white;
+
+	&__bg-container {
+		padding: 75px 0;
+		background-image: linear-gradient(to top right, $color_pink, $color_purple);
+	}
+
+	&__author {
+		margin-top: 50px;
+	}
+
+	@include breakpoint(md) {
+		&__bg-container {
+			padding: 150px 0;
+		}
+	}
+
+	@include breakpoint(lg) {
+		&__bg-container {
+			padding: 200px 0;
+		}
+	}
+}

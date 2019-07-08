@@ -1,0 +1,96 @@
+.project-tile {
+
+	&__inner {
+		position: relative;
+		height: 0;
+		padding-bottom: 75%;
+		background-color: hsl(0, 0, 95%);
+		overflow: hidden;
+	}
+
+	&__thumb {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		transition: 3s ease all;
+
+		&::after {
+			transition: 500ms ease all;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(to top right, $color_pink, $color_purple);
+			opacity: 0;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: 30px;
+	}
+
+	&__title {
+		color: white;
+		opacity: 0;
+		transition: 750ms ease all;
+		transform: translateY(25px);
+		margin-bottom: 20px;
+	}
+
+	&__client {
+		color: white;
+		opacity: 0;
+		transition: 750ms 200ms ease all;
+		transform: translateY(25px);
+	}
+
+	&:hover {
+		.project-tile {
+			&__thumb {
+				transform: scale(1.1);
+
+				&::after {
+					opacity: 0.86;
+				}
+			}
+
+			&__title {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			&__client {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@include breakpoint(md) {
+		.project-tile {
+			&__content {
+				padding: 60px;
+			}
+
+			&__title {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

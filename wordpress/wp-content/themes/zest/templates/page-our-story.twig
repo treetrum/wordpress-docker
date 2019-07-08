@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include "components/organisms/hero-page.twig" %}
+
+    {% set banner = post.meta('banner') %}
+    {% include "components/organisms/banner.twig" with { 
+		image: Image(banner.background_image),
+		title: banner.text
+	} %}
+
+    {% include "components/organisms/our-story-content.twig" %}
+
+    {% include "components/organisms/pillars.twig" %}
+
+    {% include "components/organisms/gallery.twig" %}
+
+    {% include "components/organisms/staff.twig" %}
+
+    {% include "components/organisms/video-player.twig" %}
+
+    {% include "components/organisms/say-hello-footer.twig" %}
+
+{% endblock content %}

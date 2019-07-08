@@ -1,0 +1,175 @@
+body {
+    font-family: $font_main;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+[class*="heading-"] {
+    font-family: $font_heading;
+    margin: 0;
+}
+
+p,
+li {
+    margin: 0;
+    font-size: 15 / 16 + em;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+p {
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 200ms ease color;
+}
+
+.heading-1 {
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    font-size: 60px;
+
+    @include breakpoint(sm) {
+        font-size: 100px;
+    }
+
+    @include breakpoint(md) {
+        font-size: 125px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 125px;
+    }
+}
+
+.heading-2 {
+    font-weight: 300;
+    letter-spacing: -0.3px;
+    line-height: 1;
+    font-size: 35 / 16 + em;
+
+    @include breakpoint(md) {
+        font-size: 75 / 16 + em;
+    }
+}
+
+.heading-3 {
+    font-size: 24 / 16 + em;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+    font-weight: 300;
+
+    @include breakpoint(md) {
+        font-size: 36 / 16 + em;
+    }
+}
+
+.heading-4 {
+    font-size: 15 / 16 + em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+p,
+span {
+    &.lead {
+        line-height: 1.5;
+        font-size: 25 / 16 + em;
+        letter-spacing: -0.3px;
+        font-weight: 300;
+    }
+}
+
+.rte {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 16px 0;
+    }
+
+    p {
+        margin: 16px 0;
+    }
+
+    p,
+    li {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    h1 {
+        @extend .heading-2;
+    }
+
+    h2 {
+        @extend .heading-3;
+    }
+
+    h3 {
+        @extend .heading-4;
+        color: $color_pink_purple;
+    }
+
+    h4 {
+        @extend .heading-4;
+        color: black;
+        text-transform: none;
+    }
+
+    ul {
+        li {
+            margin-bottom: 5px;
+        }
+    }
+
+    p,
+    ul,
+    ol,
+    blockquote {
+
+        &+h1,
+        &+h2,
+        &+h3,
+        &+h4,
+        &+h5,
+        &+h6 {
+            margin-top: 40px;
+        }
+    }
+
+    blockquote {
+        padding: 0;
+        margin: 16px 0;
+
+        padding-left: 10px;
+
+        p {
+            padding: 5px 20px;
+            border-left: 5px solid $color_pink;
+            font-size: 18px;
+        }
+    }
+
+    @include breakpoint(md) {
+        blockquote {
+            padding-left: 30px;
+
+            p {
+                padding: 10px 20px;
+                font-size: 24px;
+            }
+        }
+    }
+}

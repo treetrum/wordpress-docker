@@ -1,0 +1,19 @@
+.hero-project {
+	&__bg-container {
+		padding: 75px 0;
+		background-size: cover;
+		background-position: center;
+	}
+
+	@include breakpoint(sm) {
+		&__bg-container {
+			padding: 150px 0;
+		}
+	}
+
+	@include breakpoint(md) {
+		&__bg-container {
+			padding: 200px 0;
+		}
+	}
+}
