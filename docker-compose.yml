@@ -27,5 +27,14 @@ services:
     volumes:
       - ./wordpress:/var/www/html
 
+  composer:
+    depends_on:
+      - db
+      - wordpress
+    image: composer:latest
+    volumes:
+      - ./wordpress:/app
+    command: install
+
 volumes:
   db_data: {}
