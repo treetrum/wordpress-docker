@@ -38,7 +38,7 @@ jobs:
           command: |
             sudo apt install rsync
             echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-            rsync -avO --no-perms . sam@sjd.co:/var/www/testing.sjd.co/
+            rsync -avO --no-perms ./wordpress/ sam@sjd.co:/var/www/testing.sjd.co/
 
 workflows:
   version: 2
